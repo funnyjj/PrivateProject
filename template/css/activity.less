@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* 清除默认样式 */
+@import "base";
+.reset();
+
+@r: (640 / 640 ) * 100 * 1rem;
+.wrap{
+    width: 640 / @r;
+    margin: 0 auto;
+}
+body{
+    background: #effbff;
+}
+
+section{
+    
+    .title{
+        width: 583 / @r;
+        height: 45 / @r;
+        background-image: url(../imgs/shape.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 583 / @r 45 / @r;
+        color: #fff;
+        .bc();
+        text-align: center;
+        line-height: 45 / @r;
+        font-size: 16 / @r;
+        margin-top: 35 / @r;
+    }
+    
+    .content{
+        margin-top: 48 / @r;
+        
+        p{
+            text-align: center;
+            font-size: 28 / @r;
+            color: #2b2a2b;
+            line-height: 70 / @r;
+        }
+    }
+    
+}
+
+
+
+

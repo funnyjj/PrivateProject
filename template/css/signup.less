@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* 清除默认样式 */
+@import "base";
+.reset();
+
+@r: (640 / 640 ) * 100 * 1rem;
+.wrap{
+    width: 640 / @r;
+    margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    height: 305 / @r;
+    background-image: url(../imgs/bgone.png);
+    background-size: 640 / @r 305 / @r;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    div{
+        width: 100%;
+        height: 588 / @r;
+        background-image: url(../imgs/title.png);
+        background-size: 300 / @r 206 / @r;
+        background-repeat: no-repeat;
+        background-position: center 48 / @r;
+    }
+}
+
+
+section{
+    background: #effbff;
+    padding-bottom: 70 / @r;
+    ul{
+        background: #effbff;
+    }
+    
+    li{
+        padding: 40 / @r 50 / @r 8 / @r 54 / @r;
+        p{
+            color: #188ae4;
+            font-size: 28 / @r;
+        }
+        input{
+            font-size: 26 / @r;
+            color: #4e4e4e;
+            width: (532 - 44) / @r;
+            height: 53 / @r;
+            background: #fff;
+            border: 2 / @r solid #97d4ff;
+            border-radius: 10 / @r;
+            padding: 0 22 / @r;
+            margin: 0 auto;
+            margin-top: 15 / @r;
+        }
+        
+        .radio{
+            width: 43 / @r;
+            height: 42 / @r;
+            background-image: url(../imgs/radio.png);
+            background-size: 43 / @r 42 / @r;
+            background-repeat: no-repeat;
+            background-position: left center;
+            display: block;
+            padding-left: 62 / @r;
+            font-size: 28 / @r;
+            color: #188ae4;
+            line-height: 42 / @r;
+            margin-top: 20 / @r;
+            margin-left: 10 / @r;
+        }
+        .on{
+            background-image: url(../imgs/radio_on.png);
+            background-size: 43 / @r 42 / @r;
+            background-repeat: no-repeat;
+            background-position: left center;
+        }
+        
+        
+        .btn_box{
+            width: 178 / @r;
+            height: 72 / @r;
+            margin: 0 auto;
+            button{
+                width: 178 / @r;
+                height: 72 / @r;
+                background: #52aaef;
+                border-radius: 20 / @r;
+                font-size: 36 / @r;
+                color: #fff;
+                margin-top: 10 / @r;
+                box-shadow: 0 4px 4px #d8f2f9;
+            }
+        }
+        
+    }
+}

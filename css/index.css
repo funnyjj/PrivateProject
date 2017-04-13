@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 14px;
+    font-family:"Î¢ÈíÑÅºÚ" ;
+}
+a{
+    text-decoration: none;
+}
+
+input,button{
+    border:none;
+    -webkit-appearance: none;
+}
+ul li{
+    list-style: none;
+}
+.wrap{
+    max-width: 640px;
+    margin: 0 auto;
+    background: #73bef7;
+}
+.container{
+    width:94.375%;
+    margin: 0 auto;
+}
+.clearfix:after{
+    display: block;
+    height: 0;
+    content: '';
+    visibility: hidden;
+    clear: both;
+
+
+}
+.header a{
+    line-height: 40px;
+
+}
+.header a:nth-child(1){
+    color: #0f5178;
+    float: left;
+    text-decoration: underline;
+
+}
+.header a:nth-child(2){
+    color: #0f5178;
+    float: right;
+    text-decoration: underline;
+}
+.logo{
+    width:74.7%;
+    margin: 0 auto;
+    position: relative;
+    top: -5px;
+    display: block;
+}
+.index-btn{
+    width: 38.9%;
+    height: 35px;
+   line-height: 40px;
+    text-align: center;
+    display: block;
+    margin: 17px auto 14px;
+    font-size: 18px;
+    color:#fff;
+    border-radius:17px ;
+    background: #ff8a63;
+box-shadow:0 3.5px 0 #58a6e8;
+}
+.search{
+    width: 84.43%;
+    height: 31px;
+    border-radius: 14px;
+    overflow: hidden;
+    background:#42a2e7;
+    margin: 0 auto;
+    margin-bottom:40px;
+}
+.search input{
+width: 78%;
+    height: 30px;
+    padding-left: 2%;
+}
+.search a{
+    text-decoration: none;
+    display: inline-block;
+    font-size:16px;
+    color:#fff;
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.header-box{
+    border-bottom: 4px solid #3ea0e6;
+}
+.footer-box{
+    border-top: 10px solid #effbff ;
+}
+
+.footer{
+    max-width: 640px;
+    margin: 0 auto;
+}
+.list{
+    width: 74.7%;
+  margin: 16px 0 16px 0px;
+    height:128px ;
+}
+img{
+    width:17%;
+  border-radius: 50%;
+}
+.list .name{
+    display: inline-block;
+    position: relative;
+    bottom: 25px;
+    color: #3a3a3a;
+    font-size: 16px;
+    font-weight: bold;
+}
+.list i{
+color: #c7c7c7;
+    font-style: normal;
+}
+.list .line{
+    margin: 15px;
+    position: relative;
+    bottom: 25px;
+    color: #c7c7c7;
+}
+.list .number{
+    display: inline-block;
+    position: relative;
+    bottom: 25px;
+}
+.list .introduce{
+    display: inline-block;
+    bottom: 25px;
+}
+.list .vote{
+
+    float: right;
+}

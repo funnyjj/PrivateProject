@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div>
+                
+            </div>
+        </header>
+        
+        <section>
+            <ul>
+                <li>
+                    <p>用户名：</p>
+                    <input x-format="username" name="username" type="text" placeholder="请填写用户名">
+                </li>
+                <li>
+                    <p>密码：</p>
+                    <input x-format="password" name="password" type="password" placeholder="数字或字母不超过10个长度">
+                </li>
+                <li>
+                    <p>确认密码：</p>
+                    <input x-format="password" name="rpassword" type="password" placeholder="数字或字母不超过10个长度">
+                </li>
+                <li>
+                    <p>手机号码：</p>
+                    <input x-format="phone" name="tel" type="number" placeholder="请填写正确格式的手机号码">
+                </li>
+                <li>
+                    <p>自我描述：</p>
+                    <input x-format="describe" name="describe" type="text" placeholder="请填自我描述20字以内">
+                </li>
+                <li>
+                    <p>性别：</p>
+                    <div id="sex" data-sex="男">
+                        <a class="radio on" href="javascript:;">男</a>
+                        <a class="radio" href="javascript:;">女</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="btn_box">
+                        <button id="submit">提交</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+<script src="js/base.js"></script>
+<script src="js/zepto.js"></script>
+<script>
+    $(function()
+    {
+        $('#submit').click(function()
+        {
+            let username = $('[name=username]').val();
+            let password = $('[name=password]').val();
+            let rpassword = $('[name=rpassword]').val();
+            let tel = $('[name=tel]').val();
+            let describe = $('[name=describe]').val();
+            let sex = $('#sex').attr('data-sex');
+            var user = [
+                username,
+                password,
+                rpassword,
+                tel,
+                describe,
+                sex
+            ];
+            console.log(user);
+            user.forEach(function(item)
+            {
+                if(item == '') return alert(item + '不能为空');
+                console.log(item)
+            })
+        });
+        
+        $('#sex a').click(function()
+        {
+            if($(this).hasClass == 'on')
+            {
+                $(this).removeClass('on')
+            }
+            else
+            {
+                $(this).addClass('on')
+            }
+            $(this).siblings().removeClass('on');
+            $('#sex').attr({'data-sex': $(this).html()})
+        });
+        
+        
+        
+        //正则验证？？
+        var types = {
+            'phone' : /^1\d{8}/,//电话
+            'password' : /^[a-zA-Z]\w{5,10}$/g,    //密码：数字|字母 不超过10
+            'username' : /\S/,  //用户名
+            'describe': /\S/
+        }
+        var a_input = $('input');
+        a_input.each(function()
+        {
+            //var placehd = $(this).attr('placeholder');
+            a_input.keydown(function()
+            {
+                $(this).css({ 'border-color' : '' });
+                //$(this).attr('placeholder', placehd);
+            });
+
+            a_input.change(function()
+            {
+                var oFormat = $(this).attr('x-format');
+                if(oFormat in types)
+                {
+                    oFormat = types[oFormat];
+                }
+                else
+                {
+                    oFormat = new RegExp(oFormat, 'gi');
+                }
+
+                if($(this).val().match(oFormat) == null )
+                {
+                    $(this).val('');
+                    $(this).css({ 'border-color' : '#f40', 'outline' : 'none'});
+                    //$(this).attr('placeholder','输入错误，请重新输入');
+                    //alert('输入错误，请重新输入')
+                }
+            });
+        });
+        
+        voteFn.request({
+            url:'/vote/regisster/data',
+            type:"post",
+            data:user,
+
+        
+    })
+</script>
+
+
+</html>
