@@ -1,0 +1,277 @@
+@import (reference) "public";
+
+html {
+  font-size: 100px; /*640PX:1REM=100PX*/
+}
+
+html, body {
+  width: 100%;
+  background: #EBF0F5;
+  overflow-x: hidden;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 640px;
+  color: @color-text;
+}
+
+a {
+  display: block;
+  color: @color-text;
+}
+
+/*--HEADER--*/
+.header {
+  height: .88rem;
+  line-height: .88rem;
+  background: @color-blue;
+
+  /*LOGO*/
+  .logo {
+    float: left;
+    padding-left: .7rem;
+    width: 1.44rem;
+    height: 100%;
+    border-right: .02rem solid #066DC4;
+
+    background-image: url("@{img-url}/icon-logo.png");
+    background-repeat: no-repeat;
+    background-position: .1rem center;
+    background-size: .48rem .48rem;
+
+    color: @color-white;
+    font-size: .32rem;
+    font-weight: normal;
+  }
+
+  a {
+    height: 100%;
+    color: @color-white;
+    font-size: .32rem;
+    font-weight: normal;
+
+    /*NBA*/
+    &:nth-of-type(1) {
+      float: left;
+      padding: 0 .2rem;
+      border-left: .02rem solid #61B2F6;
+    }
+
+    /*LOGIN*/
+    &:nth-of-type(3) {
+      float: right;
+      padding: 0 .2rem;
+    }
+
+    /*MENU*/
+    &:nth-of-type(2) {
+      float: right;
+      width: .88rem;
+      height: .88rem;
+      background: url("@{img-url}/btn-nav-fold.png") no-repeat center center;
+      background-size: 50%;
+    }
+  }
+}
+
+/*--NAV--*/
+.nav {
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  .transition(@duration: .3s);
+
+  a {
+    float: left;
+    width: 16%;
+    height: .74rem;
+    line-height: .74rem;
+    text-align: center;
+    font-size: .32rem;
+
+    &:nth-child(6n+1) {
+      margin-left: 2%;
+    }
+  }
+}
+
+/*--VIDEO--*/
+.video {
+  height: 3.6rem;
+  background: #000;
+  overflow: hidden;
+
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*--MATCH--*/
+.match {
+  padding: .3rem;
+  background: @color-white;
+
+  /*TOP*/
+  .top {
+    height: .6rem;
+
+    .left {
+      float: left;
+      width: 34%;
+      height: 100%;
+      text-align: left;
+
+      img {
+        display: inline-block;
+        width: .6rem;
+        height: .6rem;
+        vertical-align: middle;
+      }
+
+      span {
+        display: inline-block;
+        margin-left: .24rem;
+        font-size: .4rem;
+        vertical-align: middle;
+      }
+    }
+
+    .right {
+      .left;
+      text-align: right;
+      span {
+        margin-left: 0;
+        margin-right: .24rem;
+      }
+    }
+
+    .center {
+      float: left;
+      width: 32%;
+      height: 100%;
+      line-height: .6rem;
+      text-align: center;
+      color: @color-gray;
+      font-size: .24rem;
+    }
+  }
+
+  /*MIDDLE*/
+  .middle {
+    position: relative;
+    margin: .2rem 0;
+    height: .04rem;
+    background: @color-blue;
+
+    .progress {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background: @color-red;
+      .transition(@duration:.5s);
+    }
+  }
+
+  /*BOTTOM*/
+  .bottom {
+    height: .4rem;
+    line-height: .4rem;
+    text-align: center;
+    color: @color-gray;
+    font-size: .24rem;
+
+    .center {
+      float: left;
+      width: 32%;
+      height: 100%;
+    }
+
+    .left {
+      float: left;
+      width: 34%;
+      height: 100%;
+      background: url("@{img-url}/support-left.png") no-repeat left center;
+      background-size: .24rem .24rem;
+
+      &.bg {
+        color: @color-red;
+        background: url("@{img-url}/support-red.png") no-repeat left center;
+        background-size: .24rem .24rem;
+      }
+    }
+
+    .right {
+      .left;
+      background: url("@{img-url}/support-right.png") no-repeat right center;
+      background-size: .24rem .24rem;
+
+      &.bg {
+        color: @color-blue;
+        background: url("@{img-url}/support-blue.png") no-repeat right center;
+        background-size: .24rem .24rem;
+      }
+    }
+  }
+}
+
+/*--PLAYER--*/
+.player {
+  position: relative;
+  padding: .2rem .3rem;
+  height: 2.14rem;
+  background: @color-white;
+  overflow: hidden;
+
+  .wrapper {
+    position: absolute;
+    left: .3rem;
+    top: .2rem;
+    width: 100rem; /*不确定,需要读取都内容后动态设置*/
+    height: 2.14rem;
+
+    /*一个LI占了2.4rem*/
+    li {
+      float: left;
+      margin-right: .2rem;
+
+      a {
+        width: 2.2rem;
+        div {
+          position: relative;
+          height: 1.24rem;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          span {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: .08rem;
+            height: .31rem;
+            line-height: .31rem;
+            background: rgba(0, 0, 0, 0.5);
+            color: @color-white;
+            font-size: .24rem;
+          }
+        }
+
+        p {
+          font-size: .24rem;
+          line-height: .3rem;
+        }
+
+        &.bg {
+          p {
+            color: @color-red;
+          }
+        }
+      }
+    }
+  }
+}

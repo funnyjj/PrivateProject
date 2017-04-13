@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>珠峰培训</title>
+    <!--import needed css-->
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet/less" href="css/index.less">
+    <script src="js/less-2.5.3.min.js"></script>
+
+    <!--REM-->
+    <script>
+        ~function () {
+            var desW = 640;
+            var winW = document.documentElement.clientWidth;
+            if (winW > 640) return;
+            document.documentElement.style.fontSize = winW / desW * 100 + 'px';
+        }();
+    </script>
+</head>
+<body>
+<main class="main">
+    <!--HEADER-->
+    <header class="header">
+        <h1 class="logo">腾讯体育</h1>
+        <a href="#">NBA</a>
+        <a href="javascript:;" id="menu"></a>
+        <a href="#">登录</a>
+    </header>
+
+    <!--NAV-->
+    <nav class="nav" id="nav">
+        <a href="#">NBA</a>
+        <a href="#">CBA</a>
+        <a href="#">英超</a>
+        <a href="#">欧冠</a>
+        <a href="#">亚冠</a>
+        <a href="#">西甲</a>
+        <a href="#">意甲</a>
+        <a href="#">德甲</a>
+        <a href="#">法甲</a>
+        <a href="#">中超</a>
+        <a href="#">NFL</a>
+        <a href="#">综合</a>
+        <a href="#">欧洲</a>
+        <a href="#">社区</a>
+        <a href="#">下载</a>
+    </nav>
+
+    <!--VIDEO-->
+    <section class="video">
+        <video preload="none" controls poster="img/poster.jpg"
+               src="http://123.125.86.19/sports.tc.qq.com/g0022xibxfh.mp4?vkey=BEC5DDEB6ACADB2ACC758928E702BCD7FAC7A2C96B8A2C3DBE2F40F368CAB0D4921B9993B0D297CBF6C8C6E2F54D51988516AF5A350BBD51023028A966038337B6B1E88FC8E829FCEC161ABA858DE1B2403D3A25236E6703&br=60&platform=2&fmt=auto&level=0&sdtfrom=v5010&guid=3cbccfa3afbabc96423508e76e6dd1b5"></video>
+    </section>
+
+    <!--MATCH-->
+    <section class="match" id="match">
+        <script type="text/template" id="matchTemplate">
+            <div class="top">
+                <div class="left">
+                    <img src="<%=matchInfo.leftBadge%>" alt=""/>
+                    <span><%=matchInfo.leftGoal%></span>
+                </div>
+                <div class="center"><%=matchInfo.startTime.formatTime('{1}月{2}日 {3}:{4}')%></div>
+                <div class="right">
+                    <span><%=matchInfo.rightGoal%></span>
+                    <img src="<%=matchInfo.rightBadge%>" alt=""/>
+                </div>
+            </div>
+            <%var leftSupport=parseFloat(matchInfo.leftSupport);%>
+            <%var rightSupport=parseFloat(matchInfo.rightSupport);%>
+            <%var n=(leftSupport/(leftSupport+rightSupport))*100; n='width:'+n+'%';%>
+            <div class="middle">
+                <div class="progress" id="progress" style="<%=n%>"></div>
+            </div>
+            <div class="bottom">
+                <div class="left support" id="supportLeft" type="1"><%=leftSupport%></div>
+                <div class="center"><%=matchInfo.matchDesc%></div>
+                <div class="right support" id="supportRight" type="2"><%=rightSupport%></div>
+            </div>
+        </script>
+    </section>
+
+    <!--PLAYER-->
+    <section class="player" id="player">
+        <ul class="wrapper">
+            <script type="text/template" id="playerTemplate">
+                <%$.each(playerList,function(index,item){%>
+                <li><a href="#" class="<%=index==0?'bg':''%>">
+                    <div>
+                        <img src="<%=item.pic%>" alt=""/>
+                        <span class="time"><%=item.duration.formatTime('{1}:{2}')%></span>
+                    </div>
+                    <p><%=item.title%></p>
+                </a></li>
+                <%});%>
+            </script>
+        </ul>
+    </section>
+</main>
+
+<!--import needed javascript-->
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll-5.1.3.min.js"></script>
+<script src="js/ejs.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
