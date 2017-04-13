@@ -1,0 +1,261 @@
+/*重置样式*/
+html,body,h1,h2,h3,h4,h5,h6,a,p,ul,ol,dl,li,dd,dt,form,input,table,tr,td,img,select,button{margin:0;padding: 0;}
+li{list-style: none;}
+a{text-decoration:none;outline:none;}
+img{border:0}
+body{font-family: "微软雅黑";}
+
+#title,#main{width:100%;}
+
+/*------------------------title-------------------------*/
+#title{
+	height:70px;
+	background: #e0e0e0;
+}
+#title div{
+	width:1200px;
+	margin:0 auto;
+}
+#title div a{
+	width:240px;
+	float:left;
+	display: block;
+	padding-top:15px;
+}
+#title h2{
+	width:959px;
+	height:70px;
+	font-size:26px;
+	color:#008842;
+	line-height:70px;
+	font-weight: 500
+}
+
+/*------------------------main-------------------------*/
+#main{
+	/*height:720px;*/
+	background:#f7f8f8;
+}
+#main .main_box{
+	width:1200px;
+	margin:0 auto;
+	padding-top:10px;
+	position: relative;
+	padding-bottom:30px;
+	border-bottom:1px solid #e0e0e0;
+}
+#main .tabbable{
+	width:1200px;
+	position:relative;
+}
+#main .tabbable .nav_tabs{
+	width:960px;
+	height:45px;
+	padding-left: 240px;
+	border-bottom: 1px solid #c4dfb1;
+}
+#main .tabbable .nav_tabs li{
+	width:206px;
+	height:45px;
+	margin-right:10px;
+	text-align:center;
+	line-height: 45px;
+	float:left;
+	border:1px solid #c4dfb1;
+	border-bottom:0;
+}
+#main .tabbable .nav_tabs li a{
+	width:206px;
+	height:45px;
+	display: block;
+	font-size:16px;
+	color:#444444;
+}
+#main .tabbable .nav_tabs .active{
+	height:43px;
+	background: #FFF;
+	border-top:3px solid #74c248;	
+}
+
+/*-------共同样式--------*/
+#main .tabbable .tab_pane{
+	border:1px solid #c4dfb1;
+	border-top:0;
+	background: #FFF;
+	padding:40px 0 50px;
+}
+#main .tabbable .tab_pane .f_right{
+	float:right;
+	width:327px;
+	height:390px;
+	border-left:1px dashed #cfe4c3;
+}
+#main .tabbable .tab_pane .f_left{
+	float:left;
+	width:870px;
+}
+#main .tabbable p{
+	width:730px;
+	height:40px;
+	margin-bottom:29px;
+}
+#main .tabbable input{
+	margin-right:20px;
+	height:38px;
+	border:1px solid #c1c1c1;
+	padding-left:14px;
+}
+#main .tabbable .field-name{
+	width:220px;
+	display: inline-block;
+	text-align: right;
+	padding-right: 20px;
+	font-size:12px;
+	color:#000000;
+}
+#main .tabbable .f_left .change{
+	font-size:12px;
+	color:#666666;
+}
+/*图形验证码*/
+#main .tabbable .code,.mobileCode{
+	width:161px;
+}
+/*手机号*/
+#main .tabbable .mobile{
+	width:290px;
+	background: url(../img/bg_input.png) no-repeat;
+	background-position: 276px -30px;
+}
+/*手机验证码*/
+#main .tabbable .mobileCode{
+	width:161px;
+}
+#main .tabbable .getCode{
+	width:121px;
+	display: inline-block;
+	height: 38px;
+	font-size:12px;
+	color: #008842;
+	text-align: center;
+	line-height: 38px;
+	border:1px solid #c1c1c1;
+	background: #f7f7f7;
+}
+/*设置密码，确认密码，邀请码*/
+#main .tabbable .commonInput{
+	width:290px;
+	background: url(../img/bg_input.png) no-repeat;
+	background-position: 278px -70px;
+}
+
+/*复选框*/
+#main .tabbable label{
+	height:16px;
+	font-size:12px;
+}
+#main .tabbable label input{
+	width:14px;
+	height:14px;
+	margin-right: 9px;
+	vertical-align: -1px;
+}
+#main .tabbable label a{
+	font-size: 12px;
+	color:#008842;
+	text-decoration: underline;
+}
+/*注册按钮*/
+#main .tabbable .registerbtn{
+	display: inline-block;
+	width:306px;
+	height:50px;
+	text-align: center;
+	line-height: 50px;
+	font-size:18px;
+	background: #008842;
+	color:#FFF;
+}
+/*不能为空*/
+#main .tabbable span{
+	display: inline-block;
+	font-size: 14px;
+	color:#444444;
+	text-align: center;
+}
+#main .tabbable .pass_tip i{
+	float:left;
+	display: inline-block;
+	width:17px;
+	height:17px;
+	margin-right: 5px;
+	background: url(../img/bg_login.png) no-repeat -20px -200px;
+}
+#main .tabbable .pass_error i{
+	float:left;
+	display: inline-block;
+	width:17px;
+	height:17px;
+	background: url(../img/bg_login.png) no-repeat -40px -200px;
+}
+#main .tabbable .pass_error{
+	color:red;
+}
+#main .tabbable .pass_succ i{
+	float:left;
+	display: inline-block;
+	width:17px;
+	height:17px;
+	background: url(../img/bg_login.png) no-repeat 0 -200px;
+}
+
+/*-----------手机注册-----------*/
+#main .tabbable #tab1{
+	height:560px;
+}
+#main .tabbable #tab1 .f_left{
+	width:730px;
+	height:542px;
+}
+
+
+
+
+/*-----------邮箱注册-----------*/
+#main .tabbable #tab2{
+	height:630px;
+	display:none;
+}
+#main .tabbable #tab1 .f_left{
+	width:730px;
+	height:611px;
+}
+#main .tabbable .eMail{
+	width:290px;
+	background: url(../img/bg_input.png) no-repeat;
+	background-position: 278px 10px;
+}
+
+#main .m_right{
+	position:absolute;
+	right:0;
+	top:28px;
+	height:25px;
+	font-size:12px;
+	color:#666666;
+}
+#main .m_right a{
+	font-size:12px;
+	color:#ef760a;
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+

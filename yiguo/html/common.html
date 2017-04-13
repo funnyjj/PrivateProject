@@ -1,0 +1,257 @@
+<div id="head">
+	<div>
+		<ul class="h_left">
+			<li class="welcome">欢迎光临易果生鲜！</li>
+			<li class="city">
+				<div class="l_city">配送至： </div>
+				<div class="r_city">
+					<div class="toCity">北京</div>
+					<s></s>
+				</div>
+			</li>
+		</ul>
+		<div class="h_login">
+			<a href="login.html" class="login">[登录]</a>
+			<a href="register.html" class="register">[注册]</a>
+		</div>
+		<ul class="h_right">
+			<li class="myyiguo"><a href="#"><i></i>我的易果<s></s></a></li>
+			<li class="mobile"><a href="#"><i></i>手机易果<s></s></a></li>
+			<li class="pay"><a href="#"><i></i>储值卡</a></li>
+			<li class="tel"><a href="#"><i></i>提货券入口</a></li>
+		</ul>
+		<ul id="myyg">
+			<li><a href="#">我的订单</a></li>
+			<li><a href="#">我的优惠券</a></li>
+			<li><a href="#">我的收藏</a></li>
+			<li><a href="#">我的悠币</a></li>
+			<li><a href="#">我的退换货</a></li>
+			<li><a href="#">预存款查询</a></li>
+			<li><a href="#">立即充值</a></li>
+		</ul>
+		<ul id="QRCode">
+			<li><img src="../img/qrcode_app.jpg" />扫一扫下载APP</li>
+			<li><img src="../img/qrcode_wechat.jpg" />易果生鲜微信</li>
+		</ul>
+	</div>
+</div>
+<div id="header">
+	<div>
+		<a href="index.html"><img src="../img/logo.png" class="logo" /></a>
+		<div class="search_bar">
+			<input type="text" value="&nbsp;&nbsp;&nbsp;输入商品名／编号／拼音" class="keyword" />
+			<input type="submit" value="搜索" class="search_btn" />
+			<div class="search_keywords"><a href="#">樱桃</a><span><a href="#">芒果</a></span><a href="#">奇异果</a></div>
+		</div>
+		<div class="shopcart">
+			<a href="shopcart.html">
+			<span class="totalNum"><b>0</b></span>
+			<b class="totalPrice">0.0</b>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+<div id="goodsList">
+	<div class="listTitle">
+		<p>全部商品分类▼</p>
+	</div>
+	<ul class="list"></ul>
+</div>
+
+
+<script>
+//我的易果列表
+$(function(){
+	$(".h_right > .myyiguo").mouseover(function(){
+		$(this).children().css({
+			width:98,
+			borderLeft:"1px solid #999999",
+			borderRight:"1px solid #999999",
+			color:"#008842"
+		}).children().eq(-1).css({
+			"transition": ".2s",
+			"-moz-transition": ".2s",	
+			"-webkit-transform":".2s",
+			"-o-transition":  ".2s",
+			transform:"rotate(180deg)",
+			"-moz-transition": "rotate(180deg)",	
+			"-webkit-transform":"rotate(180deg)",
+			"-o-transition":  "rotate(180deg)"
+		});
+		$("#myyg").show();
+	});
+	$(".h_right > .myyiguo").mouseout(function(){
+		$(this).children().css({
+			width:100,
+			borderLeft:0,
+			borderRight:0,
+			color:"#444444"
+		}).children().eq(-1).css({
+			"transition": ".2s",
+			"-moz-transition": ".2s",	
+			"-webkit-transform":".2s",
+			"-o-transition":  ".2s",
+			transform:"rotate(0deg)",
+			"-moz-transition": "rotate(0deg)",	
+			"-webkit-transform":"rotate(0deg)",
+			"-o-transition":  "rotate(0deg)"
+		});
+		$("#myyg").hide();	
+	});
+	$("#myyg").mouseover(function(e){
+		$(".h_right > .myyiguo").mouseover();
+		$(e.target).children().hover(function(){
+			$(this).css("color","#008842");
+		},function(){
+			$(this).css("color","#727272");
+		})
+	});
+	$("#myyg").mouseout(function(e){
+		$(".h_right > .myyiguo").mouseout();
+	});
+})
+
+//手机易果列表
+$(function(){
+	$(".h_right > .mobile").mouseover(function(){
+		$(this).children().css({
+			width:98,
+			borderLeft:"1px solid #999999",
+			borderRight:"1px solid #999999",
+			color:"#008842"
+		}).children().eq(-1).css({
+			"transition": ".2s",
+			"-moz-transition": ".2s",	
+			"-webkit-transform":".2s",
+			"-o-transition":  ".2s",
+			transform:"rotate(180deg)",
+			"-moz-transition": "rotate(180deg)",	
+			"-webkit-transform":"rotate(180deg)",
+			"-o-transition":  "rotate(180deg)"
+		});
+		$("#QRCode").show();
+	});
+	$(".h_right > .mobile").mouseout(function(){
+		$(this).children().css({
+			width:100,
+			borderLeft:0,
+			borderRight:0,
+			color:"#444444"
+		}).children().eq(-1).css({
+			"transition": ".2s",
+			"-moz-transition": ".2s",	
+			"-webkit-transform":".2s",
+			"-o-transition":  ".2s",
+			transform:"rotate(0deg)",
+			"-moz-transition": "rotate(0deg)",	
+			"-webkit-transform":"rotate(0deg)",
+			"-o-transition":  "rotate(0deg)"
+		});
+		$("#QRCode").hide();	
+	});
+})
+
+//header搜索框
+$(function(){
+	$(".search_bar > .keyword").focus(function(){
+		$(this).css("background","#FFF").val("");
+	}).blur(function(){
+		$(this).css("background","#e0e0e0").val(" 输入商品名／编号／拼音");
+	})
+});
+
+// header中购物车的数据变化
+$(function(){
+	function getNum($cookie){
+		var rowArr = $cookie === "" ? [] : $cookie.split("|");
+		var newArr = [];
+		var totalNum = 0;
+		var totalPrice = 0;
+		for(var i = 0; i < rowArr.length; i ++){
+			var colArr = rowArr[i].split("#");
+			totalNum += parseInt(colArr[4]);
+			var total = colArr[3].replace("￥","");
+			totalPrice += parseFloat(total) * colArr[4];		
+		}
+		newArr.push(totalNum);	
+		newArr.push(totalPrice.toFixed(2));	
+		return newArr;
+	}
+	if($.cookie("shopcart")){
+		var arr = getNum($.cookie("shopcart"));
+		$(".shopcart > a").children(".totalNum").children().text(arr[0]);
+		$(".shopcart > a").children(".totalPrice").text("￥" + arr[1]);
+	}
+	
+})
+
+//商品列表
+$(function(){
+	$.get("../js/goodsList.json",function(data){
+		var html = "";//商品列表
+		var arr = [];//子列表数据
+		var oUL = "";//子列表ul
+		var oDiv = "";//子列表
+		//商品列表
+		for(var i = 0; i < data.length; i++){
+			html += "<li class=goods"+ i +"><a href='products.html'>"
+				  + "<i class='list"+ i +"'> </i>"
+				  + data[i].itemname
+				  + "<span>></span>"
+				  + "</a></li>" ;
+			arr.push(data[i].subitem);
+		}
+		$(".list").html(html).css("opacity","0.9");
+		//点击列表显示/隐藏
+		$("#goodsList > .listTitle").click(function(){
+			$(this).next().toggle();
+		});
+		//创建子列表节点
+		var $listChild = $("<div class='listChild'></div>");
+		//鼠标划入显示/划出隐藏子列表
+		$("#goodsList > .list").children().hover(function(){
+			//鼠标划入列表样式
+			$(this).css({
+				border:"1px solid #999999",
+				borderRight:"1px solid #FFF",
+				width:179,
+				height:40
+			}).children("a").stop().animate({
+				left:10
+			}).css("color","#008842").children("span").css("display","block");
+			//插入子列表节点到li
+			$listChild.appendTo($(this));
+			$(this).children("div").css({
+				display:"block",
+				border:"1px solid #999999",
+				height:498
+			});
+			//添加子列表内容
+			oDiv = "<h3><a href='products.html'>"+ $(this).text() +"</a></h3>"
+			 	 + "<ul class='ulList'>"
+		 	 	 + "</ul>"
+		 	 	 + "<img src='../img/nav"+ ($(this).index()+1) +".png' class='navImg' />"; 
+			for(var j = 0; j < arr[$(this).index()].length;j ++){
+				oUL += "<li><a href='blueberry.html'>"+ arr[$(this).index()][j].itemname +"</a></li>"
+			}
+			$(".listChild").html(oDiv).css("opacity","0.9");
+			$(".listChild > .ulList").html(oUL);
+		},function(){
+			$(this).css({
+				border:0,
+				width:180,
+				height:42
+			}).children("a").stop().animate({
+				left:0
+			}).css("color","#444444").children("span").css("display","none");
+			$(this).children("div").css("display","none");
+			oDiv = "";
+			oUL = "";
+			$(".listChild").html(oDiv);
+			$(".listChild > .ulList").html(oUL);
+		});
+	});
+});
+</script>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>易果网</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/login.css" />
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
+	<script src="../js/login.js"></script>
+</head>
+<body>
+	<div id="title">
+		<div>
+			<a href="index.html"><img src="../img/logo.png"></a>
+			<h2>登录</h2>
+		</div>
+	</div>
+	<div id="main">
+		<div>
+			<div class="m_left">
+				<img src="../img/login_left.jpg">
+			</div>
+			<div class="m_right">
+				<h3>欢迎登录</h3>
+				<p class="toRegister">还没有账号？<a href="register.html">立即注册</a></p>
+				<p class="user">
+					<span class="name">&nbsp;</span>
+					<input type="text" id="username" placeholder="邮箱/账号/已验证手机" />
+				</p>
+				<p class="user">
+					<span class="psw">&nbsp;</span>
+					<input type="password" id="password" placeholder="密码" />
+				</p>
+				<p class="checkCode">
+					<span class="psw">&nbsp;</span>
+					<input type="text" id="code" placeholder="验证码" />
+				</p>
+				<p class="codeImg">
+					<img src="../img/code1.jpg">
+					<a href="javascript:;" class="change">换一张</a>
+				</p>
+				<p class="autolog">
+					<input type="checkbox"/>&nbsp;&nbsp;
+					<span>自动登录</span>
+				</p>
+				<p class="nopsw"><a href="#">忘记登录密码？</a></p>
+				<p class="logbtn"><a href="index.html">登 录</a></p>	
+				<p class="third">第三方登录</p>
+				<div>
+					<a href="#"><i></i></a>
+					<a href="#"><s></s></a>
+					<a href="#"><b></b></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="Foot">
+		<script>
+			$("#Foot").load("common2.html #foot");
+		</script>
+	</div>
+</body>
+</html>

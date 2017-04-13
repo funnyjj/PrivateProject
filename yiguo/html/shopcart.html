@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>购物车-易果网</title>
+	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../css/shopcart.css" />
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script src="../js/jquery.cookie.js"></script>
+	<script src="../js/shopcart.js"></script>
+	<script src="../js/products.js"></script>
+</head>
+<body>
+	<div id="head">
+		<div>
+			<ul class="h_left">
+				<li class="welcome">欢迎光临易果生鲜！</li>
+				<li class="city">
+					<div class="l_city">配送至： </div>
+					<div class="r_city">
+						<div class="toCity">北京</div>
+						<s></s>
+					</div>
+				</li>
+			</ul>
+			<div class="h_login">
+				<a href="login.html" class="login">[登录]</a>
+				<a href="register.html" class="register">[注册]</a>
+			</div>
+			<ul class="h_right">
+				<li class="myyiguo"><a href="#"><i></i>我的易果<s></s></a></li>
+				<li class="mobile"><a href="#"><i></i>手机易果<s></s></a></li>
+				<li class="pay"><a href="#"><i></i>储值卡</a></li>
+				<li class="tel"><a href="#"><i></i>提货券入口</a></li>
+			</ul>
+			<ul id="myyg">
+				<li><a href="#">我的订单</a></li>
+				<li><a href="#">我的优惠券</a></li>
+				<li><a href="#">我的收藏</a></li>
+				<li><a href="#">我的悠币</a></li>
+				<li><a href="#">我的退换货</a></li>
+				<li><a href="#">预存款查询</a></li>
+				<li><a href="#">立即充值</a></li>
+			</ul>
+			<ul id="QRCode">
+				<li><img src="../img/qrcode_app.jpg" />扫一扫下载APP</li>
+				<li><img src="../img/qrcode_wechat.jpg" />易果生鲜微信</li>
+			</ul>
+		</div>
+	</div>
+	<div id="header">
+		<div>
+			<a href="index.html"><img src="../img/logo.png" class="logo" /></a>
+			<div class="step">
+				<img src="../img/step.jpg">
+			</div>
+		</div>
+	</div>
+	<div id="main">
+		<div>
+			<div id="no_pro">
+				<p>购物车是空的，去买点东西吧！ <a href="index.html">继续逛逛 >></a></p>				
+				<p>你还尚未<a href="login.html">登录</a></p>
+			</div>
+			<div id="pro_list">
+				<div class="title">
+					<i></i>
+					<a href="index.html">继续购物>></a>
+				</div>
+				<div class="list_th">
+					<table>
+						<th class="cart_t_check">
+							<input type="checkbox" checked="checked" value="全选"/>全选
+						</th>
+						<th class="cart_t_info">商品信息</th>
+						<th class="cart_t_ub">货号</th>
+						<th class="cart_t_price">单价</th>
+						<th class="cart_t_num">购买数量</th>
+						<th class="cart_t_total">合计</th>
+						<th class="cart_t_spec">规格</th>
+						<th class="cart_t_opera">操作</th>
+					</table>
+				</div>
+				<!-- 购物车列表 -->
+				<div class="cartList"></div>
+				
+				<div class="cart_foot">
+					<div class="cf_left">
+						<input type="checkbox" checked="checked" value="全选"/>全选
+						<a href="javascript:;"><i></i>删除选中的商品</a>
+						<a href="javascript:;">清空购物车</a>
+					</div>
+					<div class="cf_right">
+						<span>总价：<strong>￥0.00</strong></span>
+						<a href="#">去结算</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="Foot">
+		<script>
+			$("#Foot").load("common2.html #foot");
+		</script>
+	</div>
+</body>
+</html>

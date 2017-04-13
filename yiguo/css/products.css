@@ -1,0 +1,233 @@
+/*重置样式*/
+html,body,h1,h2,h3,h4,h5,h6,a,p,ul,ol,dl,li,dd,dt,form,input,table,tr,td,img,select,button{margin:0;padding: 0;}
+li{list-style: none;}
+a{text-decoration:none;outline:none;}
+img{border:0}
+body{font-family: "微软雅黑";}
+
+#banner,#main{width:100%;}
+
+/*-----------------------banner-----------------------------*/
+#banner{
+	height:490px;
+	background:#f7f8f8;
+	padding-bottom:20px;
+}
+#banner div{
+	width:1200px;
+	margin:0 auto;
+}
+#banner .b_top{
+	height:300px;
+}
+#banner .b_top img{
+	display:block;
+}
+#banner .b_bottom{
+	height:180px;
+	margin-top:10px;
+}
+#banner .b_bottom ul li{
+	float:left;
+	margin-right:10px;
+}
+#banner .b_bottom ul .b_li{
+	margin-right:0;
+}
+#banner img:hover{
+	box-shadow: 0 0 10px #000;
+}
+
+/*-----------------------main----------------------------*/
+#main{
+	height:913px;
+	background:#f7f8f8;
+}
+#main>div{
+	width:1200px;
+	margin:0 auto;
+}
+
+/*------------------goodsNav------------------*/
+#main .goodsNav{
+	width:1198px;
+	height:35px;
+	background:#f1f1f1;
+	border:1px solid #c7c7c7;
+}
+#main .goodsNav p{
+	width:98px;
+	height:35px;
+	float:left;
+	text-align:center;
+	line-height:35px;
+	background: #eaeaea;
+}
+#main .goodsNav p a{
+	font-size:12px;
+	color:#909090;
+}
+#main .goodsNav ul{
+	float:left;
+	width:1100px;
+	height:35px;
+}
+#main .goodsNav li{
+	float:left;
+	height:35px;
+	line-height:35px;
+}
+#main .goodsNav li a{
+	margin-top:12px;
+	padding:0 16px;
+	height:12px;
+	border-right:1px solid #8a448a;	
+	font-size:12px;
+	color:#909090;
+}
+#main .goodsNav li a:hover{
+	text-decoration:underline;
+	color:#008842;
+}
+#main .goodsNav .l_li a{
+	border-right:0;
+}
+
+/*------------------sort------------------*/
+#main .sort{
+	margin-top:20px;
+	width:1200px;
+	height:35px;
+	background: #eaeaea;
+	padding-top:5px;
+}
+#main .sort .sortDiv{
+	width:242px;
+	height:28px;
+	border:1px solid #c7c7c7;
+	margin-left:9px;
+}
+#main .sort .sortDiv p{
+	width:57px;
+	height:28px;
+	float:left;
+	height:28px;
+	border-right:1px solid #c7c7c7;
+	background:#FFF;
+}
+#main .sort .sortDiv p a{
+	margin-left:10px;
+	margin-top:8px;
+	font-size:12px;
+	color:#444444;
+	float:left;
+}
+#main .sort .sortDiv .sort1{
+	width:68px;
+}
+#main .sort .sortDiv .sort4{
+	border-right: 0
+}
+#main .sort .sortDiv .sort2 i{
+	width:9px;
+	height:11px;
+	margin-top:3px;
+	float:right;
+	margin-left:3px;
+	display: block;
+	background:url(../img/products/filter_icon.png) no-repeat 0 -2px;
+}
+#main .sort .sortDiv .sort3 i{
+	width:9px;
+	height:14px;
+	float:right;
+	margin-left:3px;
+	display: block;
+	background:url(../img/products/filter_icon.png) no-repeat -20px 0;
+}
+#main .sort .sortDiv .sort4 i{
+	width:9px;
+	height:11px;
+	margin-top:3px;
+	float:right;
+	margin-left:3px;
+	display: block;
+	background:url(../img/products/filter_icon.png) no-repeat 0 -2px;
+}
+#main .sort .sortDiv .on{
+	background: #eaeaea;
+}
+
+/*------------------productsList------------------*/
+#main .productsList{
+	width:1200px;
+}
+#main .productsList dl{
+	width:290px;
+	height:358px;
+	background: #FFF;
+	overflow:hidden;
+	float:left;
+	position:relative;
+	margin-right:10px;
+	margin-top:15px;
+}
+#main .productsList .pDL{
+	margin-right: 0;
+}
+#main .productsList dl dt{
+	width:290px;
+	height:290px;
+	overflow:hidden;
+}
+#main .productsList dl dd{
+	width:290px;
+	height:68px;
+	padding:10px;
+}
+#main .productsList dl dd p{
+	height:28px;
+}
+#main .productsList dl dd p a{
+	font-size:12px;
+	color:#444444;
+}
+#main .productsList dl dd p a:hover{
+	color:#008842;
+	text-decoration:underline;
+}
+#main .productsList dl dd b{
+	color:#e7380d;
+	font-size:18px;
+}
+
+#main .productsList .buy{
+	width:290px;
+	height:40px;
+	background:#FFF;
+	position:absolute;
+	top:250px;
+	left:0;
+	display:none;
+}
+#main .productsList .buy p{
+	width:200px;
+	height:25px;
+	background: #008842;
+	font-size:12px;
+	color:#FFF;
+	margin-left:35px;
+	margin-top:8px;
+	text-align:center;
+	line-height:25px;
+}
+#main .productsList dl .newProduct{
+	width:60px;
+	height:60px;
+	z-index:100;
+	position:absolute;
+	left:10px;
+	top:10px;
+}
+
+

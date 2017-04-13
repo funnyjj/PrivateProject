@@ -1,0 +1,551 @@
+/*重置样式*/
+html,body,h1,h2,h3,h4,h5,h6,a,p,ul,ol,dl,li,dd,dt,form,input,table,tr,td,img,select,button{margin:0;padding: 0;}
+li{list-style: none;}
+a{text-decoration:none;outline:none;}
+img{border:0}
+body{font-family: "微软雅黑";}
+
+#group,#berry_intro,#content{width:100%;}
+
+/*--------------------group--------------------*/
+#group{
+	height:35px;
+	background: #f7f8f8;
+}
+#group p{
+	width:1200px;
+	height:35px;
+	margin:0 auto;
+	font-size:12px;
+	color:#444444;
+	line-height: 35px;
+}
+#group p a{
+	padding:0 14px;
+	font-size:12px;
+	color:#444444;
+	float:left;
+}
+#group p a:hover{
+	color:#008842;
+	text-decoration: underline;
+}
+#group p span{
+	font-size:12px;
+	color:#444444;
+	float:left;
+}
+
+/*--------------------berry_intro--------------------*/
+#berry_intro{
+	height:620px;
+	background: #f7f8f8;
+	padding-bottom:20px;
+}
+#berry_intro div{
+	width:1200px;
+	margin:0 auto;
+	position:relative;
+}
+/*左侧图片*/
+#berry_intro .pic_perview{
+	width:500px;
+	height:600px;
+	float:left;
+	position: relative;
+}
+#berry_intro .pic_perview .pic_big{
+	width:500px;
+	height:500px;
+}
+#berry_intro .pic_perview .pic_big img{
+	position:absolute;
+	left:0;
+	top:0;
+}
+#berry_intro .pic_perview .pic_big .pic_b2{
+	display: none;
+}
+#berry_intro .pic_perview .pic_big .pic_b3{
+	display: none;
+}
+#berry_intro .pic_perview .pic_thumb{
+	width:500px;
+	height:97px;
+	margin-top:10px;
+}
+#berry_intro .pic_perview .pic_thumb li{
+	float:left;
+	margin-right:15px;
+}
+#berry_intro .pic_perview .pic_thumb li img{
+	border:1px solid #bcbcbc;
+}
+#berry_intro .pic_perview .pic_thumb .on img{
+	border:1px solid #008842;
+}
+#berry_intro .pic_perview .icon{
+	width:46px;
+	height:46px;
+	position:absolute;
+	left:10px;
+	top:10px;
+	z-index:10;
+}
+
+/*右侧产品信息*/
+#berry_intro .product_info{
+	width:680px;
+	height:600px;
+	float:right;
+}
+#berry_intro .product_info h2{
+	width:680px;
+	height:100px;
+	font-size:26px;
+	color:#444;
+	font-weight: 500
+}
+#berry_intro .product_info .berry_price{
+	width:640px;
+	height:70px;
+	padding:10px 20px;
+	background: #FFF;
+}
+#berry_intro .product_info .berry_price .price{
+	width:150px;
+	height:70px;
+	float:left;
+
+}
+#berry_intro .product_info .berry_price .price span{
+	font-size:12px;
+	color:#444;
+}
+#berry_intro .product_info .berry_price .price em{
+	padding:0 5px;
+	font-size: 18px;
+	color:red;
+	font-style: normal;
+}
+#berry_intro .product_info .berry_price .price strong{
+	font-size: 35px;
+	color:red;
+	font-weight: normal;
+}
+#berry_intro .product_info .berry_price .review{
+	width:68px;
+	height:67px;
+	float: right;
+	text-align:center;
+}
+#berry_intro .product_info .berry_price .review p{
+	height:22px;
+	font-size:12px;
+	color:#999;
+	line-height:22px;
+}
+#berry_intro .product_info .berry_price .review p span{
+	font-size:18px;
+	color:red;
+}
+#berry_intro .product_info .berry_price .review p a{
+	font-size:12px;
+	color:#999;
+}
+#berry_intro .product_info .berry_price .review p a:hover{
+	font-size:12px;
+	color:#008842;
+}
+#berry_intro .product_info .berry_other{
+	width:680px;
+	height:390px;
+	margin-top:20px;
+}
+#berry_intro .product_info .berry_other .left{
+	width:529px;
+	height:246px;
+	padding-right:20px;
+	border-right:1px solid #d9d9d9;
+	float:left;
+}
+#berry_intro .product_info .berry_other .left .solid{
+	width:529px;
+	height:25px;
+	margin-top:10px;
+	border-top:1px dashed #d9d9d9;
+}
+#berry_intro .product_info .berry_other .left .choose{
+	width:529px;
+	height:53px;
+}
+#berry_intro .product_info .choose .dt{
+	width:40px;
+	height:53px;
+	padding:0 10px;
+	font-size:12px;
+	color:#444;
+	float:left;
+	line-height: 53px;
+}
+#berry_intro .product_info .choose .dd{
+	width:468px;
+	height:53px;
+	float:left;	
+}
+#berry_intro .product_info .choose .dd li{
+	width:69px;
+	height:53px;
+	float:left;
+	margin-right:10px;
+}
+#berry_intro .product_info .choose .dd li span{
+	width:67px;
+	height:25px;
+	display:block;
+	border:1px solid #e2e2e2;
+	text-align: center;
+	line-height: 25px;
+	font-size:12px;
+	color:#444;
+	background: #FFF;
+}
+#berry_intro .product_info .choose .dd li .c_much{
+	border-top:0;
+}
+#berry_intro .product_info .choose .dd .on{
+	position: relative;
+}
+#berry_intro .product_info .choose .dd .on span{
+	border:1px solid #008842;
+}
+#berry_intro .product_info .choose .dd .on .c_much{
+	border-top:0;
+}
+#berry_intro .product_info .choose .dd .on i{
+	width:16px;
+	height:16px;
+	display: block;
+	position: absolute;
+	left:52px;
+	top:37px;
+	background: url(../img/product.png) no-repeat 0 0;
+}
+#berry_intro .product_info .serve{
+	width:519px;
+	height:33px;
+	margin-top:27px;
+	padding-left: 10px;
+	font-size:12px;
+	color:#999;
+}
+#berry_intro .product_info .serve span{
+	font-size:12px;
+	color:#008842;
+}
+#berry_intro .product_info .amount .dt{
+	width:40px;
+	height:43px;
+	padding:0 10px;
+	font-size:12px;
+	color:#444;
+	float:left;
+	line-height: 43px;
+}
+#berry_intro .product_info .amount .dd{
+	width:468px;
+	height:43px;
+	float:left;
+}
+#berry_intro .product_info .amount .dd .count{
+	width:60px;
+	height:41px;
+	float:left;
+}
+#berry_intro .product_info .amount #berry_num{
+	width:39px;
+	height:36px;
+	border:1px solid #e2e2e2;
+	text-align: center;
+	color:#444;
+	font-size:18px;
+	float:left;
+}
+#berry_intro .product_info .amount button{
+	width:19px;
+	height:19px;
+	border:1px solid #e2e2e2;
+	border-left:0;
+	float:left;
+	background: #FFF;
+}
+#berry_intro .product_info .amount .addCart{
+	margin-left:28px;
+	width:187px;
+	height:43px;
+	background: #008842;
+	color:#FFF;
+	font-size: 17px;
+	text-align: center;
+	line-height: 43px;
+	float:left;
+}
+#berry_intro .product_info .share{
+	width:469px;
+	height:16px;
+	padding-left: 60px;
+	margin-top:22px;
+	float:left;
+}
+#berry_intro .product_info .share .favorate{
+	width:45px;
+	height:16px;
+	margin-left:15px;
+	float:left;
+	font-size:12px;
+	color:#444;
+
+}
+#berry_intro .product_info .share .favorate i{
+	width:16px;
+	height:14px;
+	display:inline-block;
+	background: url(../img/product.png) no-repeat -24px 0;
+	margin-right:5px;
+}
+#berry_intro .product_info .share .toshare{
+	width:45px;
+	height:16px;
+	margin-left:15px;
+	float:left;
+	font-size:12px;
+	color:#444;
+
+}
+#berry_intro .product_info .share .toshare i{
+	width:13px;
+	height:14px;
+	display:inline-block;
+	background: url(../img/product.png) no-repeat -1px -42px;
+	margin-right:5px;
+}
+
+#berry_intro .product_info .berry_other .right{
+	width:120px;
+	height:120px;
+	padding-left:10px;
+	float:right;
+}
+#berry_intro .product_info .berry_other .right table{
+	text-align: center;
+	line-height: 25px;
+	font-size:12px;
+	color:#777;
+
+}
+#berry_intro .product_info .berry_other .right tr{
+	height:25px;
+}
+#berry_intro .product_info .berry_other .right th{
+	width:70px;
+	font-weight:500;
+}
+#berry_intro .product_info .berry_other .right td{
+	width:50px;
+}
+#berry_intro .product_info .berry_other .right .td1{
+	color:#2ca6e0;
+}
+
+
+/*----------------------content---------------------*/
+#content{
+	height: 3050px;
+	background:#f7f8f8;
+}
+#content div{
+	width:1200px;
+	margin:0 auto;
+}
+/*左侧栏*/
+#content .left_con{
+	width:253px;
+	height:211px;
+	border:1px solid #cde4c0;
+	float:left;
+}
+#content .left_con h3{
+	height:30px;
+	background:#008842;
+	font-size:12px;
+	color:#FFF;
+	padding-left:10px;
+	line-height: 30px;
+}
+#content .left_con dl{
+	width:233px;
+	height:80px;
+	margin-left:10px;
+	padding-top:10px;
+	border-bottom:1px dashed #cdcdcd;
+}
+#content .left_con dt{
+	width:68px;
+	height:68px;
+	border:1px solid #dfdfdf;
+	float:left;
+}
+#content .left_con dd{
+	width:147px;
+	float:left;
+	padding-left:10px;
+}
+#content .left_con dd p{
+	width:147px;
+	height: 48px;
+	line-height: 20px;
+	font-size:12px;
+	color:#777777;
+}
+#content .left_con dd span{
+	width:147px;
+	height: 22px;
+	line-height: 22px;
+	font-size:12px;
+	color:red;
+}
+
+/*右侧栏*/
+#content .right_con{
+	width:930px;
+	float: right;
+	position:relative;
+}
+/*当季热卖*/
+#content .right_con .nowHot{
+	width:928px;
+	height:276px;
+	background: #FFF;
+	border:1px solid #d4d4d4;
+}
+#content .right_con .nowHot h3{
+	width:928px;
+	height:35px;
+	font-size:14px;
+	color:#008842;
+	line-height: 35px;
+	margin-left:25px;
+}
+#content .right_con .nowHot dl{
+	width:135px;
+	height:206px;
+	padding:10px 25px 25px;
+	float:left;
+}
+#content .right_con .nowHot dt img{
+	width:135px;
+	height:135px;
+}
+#content .right_con .nowHot dd{
+	text-align:center;
+}
+#content .right_con .nowHot dd p{
+	width:135px;
+	height:43px;
+}
+#content .right_con .nowHot dd p a{
+	font-size:12px;
+	color:#777777;
+}
+#content .right_con .nowHot dd p a:hover{
+	font-size:12px;
+	color:#008842;
+}
+#content .right_con .nowHot dd span{
+	font-size:12px;
+	color:red;
+	float: left;
+}
+#content .right_con .nowHot dd del{
+	font-size:12px;
+	color:#aaaaaa;
+	float: right;
+}
+
+/*商品详情*/
+#content .right_con .berry_detail{
+	width:928px;
+	background:#FFF;
+	margin-top:25px;
+	border:1px solid #d4d4d4;
+}
+#content .right_con .berry_detail .detail_tab{
+	height:40px;
+	width:928px;
+	border-bottom:1px solid #d4d4d4;
+}
+#content .right_con .berry_detail .detail_tab li{
+	height:40px;
+	width:130px;
+	float:left;
+	border-right:1px solid #d4d4d4;
+	text-align: center;
+	line-height: 40px
+}
+#content .right_con .berry_detail .detail_tab .on{
+	border-top:3px solid #008842;
+	background:#FFF;
+	margin-top:-1px;
+	line-height: 37px
+}
+#content .right_con .berry_detail .detail_tab li a{
+	font-size: 12px;
+	color:#444;
+}
+#content .right_con .berry_detail .detail_item{
+	width:880px;
+	padding:24px;
+}
+/*跟随菜单*/
+#content .right_con .detail_tab2{
+	height:40px;
+	width:928px;
+	border-bottom:1px solid #d4d4d4;
+	position:fixed;
+	left:303px;
+	top:0;
+	display: none;
+	background:#fff;
+}
+#content .right_con .detail_tab2 li{
+	height:40px;
+	width:130px;
+	float:left;
+	border-right:1px solid #d4d4d4;
+	text-align: center;
+	line-height: 40px
+}
+#content .right_con .detail_tab2 .on{
+	border-top:3px solid #008842;
+	background:#FFF;
+	margin-top:-1px;
+	line-height: 37px
+}
+#content .right_con .detail_tab2 li a{
+	font-size: 12px;
+	color:#444;
+}
+
+/*用户评价*/
+#content .right_con .comment{
+	width:880px;
+	padding:24px;
+	display: none;
+}
+#content .right_con .comment p{
+	height:40px;
+	font-size:14px;
+	text-align: center;
+	color:#444;
+}
+
